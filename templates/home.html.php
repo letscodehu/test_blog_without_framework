@@ -3,7 +3,7 @@ foreach ($post as $row){
     ?>
     <br>
     <strong>
-        <a href=" <?php echo $rootDir ?>?id=<?php $row->id; ?>">
+        <a href="post.php?id=<?php echo $row->id; ?>">
                 <?= $row->title ?>
         </a>
     </strong>
