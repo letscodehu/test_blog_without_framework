@@ -12,7 +12,6 @@ SQL;
 
 $post = $database->query($sql);
 
-$rootDir = "MAMP/blog/";
 
 //nastavenie toho, ze ktoru stranku require v @layout.html.php: *.html.php
 $selectedPage = "home";
