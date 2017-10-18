@@ -1,7 +1,6 @@
 <?php
 
-require "main.inc.php";
-
+require "main.inc.php"
 
 //query pre vyber prvych 3 postov
 $sql = <<<SQL
