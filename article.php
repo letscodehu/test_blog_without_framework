@@ -3,11 +3,11 @@
 require "master.inc.php";
 
 
-//query for choosing first 3 posts
-$sql = "SELECT * FROM post ORDER BY created_at";
+//query for choosing post
+$sqlPost = "SELECT * FROM post ORDER BY created_at";
 
-//writing out all posts - homepage
-$posts = $database->query($sql)->fetch();
+//writing out selected post
+$selectedPost = $database->query($sqlPost)->fetch();
 
 //writing out comments
 $sqlComments = "SELECT * FROM comment";
