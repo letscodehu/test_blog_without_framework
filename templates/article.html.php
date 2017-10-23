@@ -1,2 +1,4 @@
 
-<h2><?php echo $onePost->title ?></h2>
+<h2><?php echo $posts->title ?></h2>
+
+<p><?php echo $posts->content ?></p>

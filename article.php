@@ -9,10 +9,13 @@ $sql = "SELECT * FROM post ORDER BY created_at";
 //writing out all posts - homepage
 $posts = $database->query($sql)->fetch();
 
+//writing out comments
+$sqlComments = "SELECT * FROM comment";
+$comments = $database->query($sqlComments);
 
 //which page will be required in @layout.html.php. format: $page.html.php
-$page = "home";
-$pageTitle = "Home";
+$page = "article";
+$pageTitle = "Article";
 
 
 include "templates/@layout.html.php";
