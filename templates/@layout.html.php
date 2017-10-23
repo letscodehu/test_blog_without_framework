@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title><?php echo $pageTitle ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,7 +73,7 @@
 
 
             <?php
-            include "$selectedPage.html.php";
+            include "$page.html.php";
             ?>
 
 

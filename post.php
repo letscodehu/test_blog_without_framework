@@ -1,20 +1,19 @@
 <?php
 
-require "main.inc.php"
+require "master.inc.php";
 
-//query pre vyber prvych 3 postov
-$sql = <<<SQL
+//query pre vypis 1 postu
+$allPosts = <<<SQL
 SELECT *
 FROM post
-ORDER BY created_at 
-LIMIT 3
+ORDER BY created_at
 SQL;
 
-$post = $database->query($sql);
+$onePost = $database->query($allPosts)->fetch();
 
 
 //nastavenie toho, ze ktoru stranku require v @layout.html.php: *.html.php
-$selectedPage = "home";
+$selectedPage = "post";
 
 
 include "templates/@layout.html.php";
