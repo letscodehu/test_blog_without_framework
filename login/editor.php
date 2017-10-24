@@ -1,10 +1,13 @@
 <?php
 
-include "master.inc.php";
+session_start();
+require "authentication.php";
+require "../master.inc.php";
+$login = 0;
 
 //which page will be required in @layout.html.php. format: $page.html.php
-$page = "article";
-$pageTitle = "Article";
+$page = "login/editor";
+$pageTitle = "login | editor";
 
 $id=1;
 if (isset($_GET['id'])){
@@ -17,13 +20,7 @@ $sqlPosts = "SELECT * FROM post WHERE id=?";
 //writing out selected post
 $selectedPost = $database->query($sqlPosts, $id)->fetch();
 
-//writing out comments
-$sqlComments = "SELECT comment.* 
-                FROM post LEFT JOIN comment ON (post.id = comment.post_id)
-                WHERE post.id=?";
-$comments = $database->query($sqlComments, $id);
 
 
 
-
-include "templates/@layout.html.php";
+include "../templates/@layout.html.php";

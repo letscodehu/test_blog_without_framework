@@ -3,7 +3,7 @@ foreach ($posts as $post){
     ?>
     <br>
     <strong>
-        <a href="article.php?id=<?php echo $row->id; ?>">
+        <a href="article.php?id=<?php echo $post->id; ?>">
                 <?= $post->title ?>
         </a>
     </strong>
