@@ -17,3 +17,11 @@ $options = [
     'database' => 'blog',
 ];
 $database = new Dibi\Connection($options);
+
+$dirBase = "./";
+$isLoggedIn = false;
+
+
+function redirect($url) {
+    die('neni implementovano');
+}

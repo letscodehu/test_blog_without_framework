@@ -1,13 +1,12 @@
 <?php
 
-session_start();
-require "authentication.php";
+require "secured.inc.php";
 require "../master.inc.php";
-$login = 0;
+
 
 //which page will be required in @layout.html.php. format: $page.html.php
-$page = "login/editor";
-$pageTitle = "login | editor";
+$page = "in/editor";
+$pageTitle = "in | editor";
 
 $id=1;
 if (isset($_GET['id'])){
