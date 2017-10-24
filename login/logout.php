@@ -1,11 +1,17 @@
 <?php
-$email = trim($email);
-$password = trim($password);
+session_start();
+require "authentication.php";
 
-$answer = null;
 
-if (!empty($email) || !empty($password) || authenticate($email , $password) ){
-    $_SESSION['user'] = $email4;
-}
+
+
+
+//which page will be required in @layout.html.php. format: $page.html.php
+$login = 0;
+$page = "login/logout";
+$pageTitle = "Admin | Logout";
+
+
+include "../templates/@layout.html.php";
 
 

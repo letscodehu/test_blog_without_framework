@@ -48,10 +48,11 @@
                     <a class="nav-link" href="../contact.html">Contact</a>
                 </li>
                 <?php
-                if (loggedIn()){
+
+                if(loggedIn()){
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="../logout.html">Logout</a>
+                    <a class="nav-link" href="/MAMP/blog/login/logout.php">Logout</a>
                 </li>
 
                 <?php }?>
