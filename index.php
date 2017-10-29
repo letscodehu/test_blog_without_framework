@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require "master.inc.php";
 
@@ -8,7 +9,6 @@ $sql = "SELECT * FROM post ORDER BY created_at LIMIT 3";
 
 //writing out all posts - homepage
 $posts = $database->query($sql);
-
 
 //which page will be required in @layout.html.php. format: $page.html.php
 $page = "home";
